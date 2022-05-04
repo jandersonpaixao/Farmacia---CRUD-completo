@@ -30,8 +30,8 @@ public class Categorias {
 	@Size(max = 255)
 	private String descricao;
 	
-	@OneToMany(mappedBy = "produtos", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties("produtos")
+	@OneToMany(mappedBy = "categorias", cascade = CascadeType.REMOVE)
+	@JsonIgnoreProperties("categorias")
 	private List<Produtos> produtos;
 
 	public Long getId() {
